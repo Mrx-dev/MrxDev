@@ -34,9 +34,309 @@
 </head>
 
 <style>
+    html {
+        background-color: #121212;
+    }
 
+    body {
+        margin: 0%;
+        padding: 0%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: #121212;
+    }
 
-    /*# sourceMappingURL=style.css.map */
+    nav {
+        width: 100% !important;
+        position: fixed !important;
+        top: 0%;
+        z-index: 1;
+    }
+
+    @-webkit-keyframes link {
+        0% {
+            color: white;
+        }
+
+        to {
+            color: #FFC107;
+        }
+    }
+
+    @keyframes link {
+        0% {
+            color: white;
+        }
+
+        to {
+            color: #FFC107;
+        }
+    }
+
+    .selects>a {
+        color: white;
+    }
+
+    .selects>a:hover {
+        background-color: transparent;
+        -webkit-animation: link 0.2s forwards ease-out;
+        animation: link 0.2s forwards ease-out;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .text-muted {
+        color: #d8d8d8 !important;
+    }
+
+    .container-fluid {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .Logo {
+        width: 50px;
+        margin-right: 20px;
+    }
+
+    img {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    .select {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .socials {
+        width: 200px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .app {
+        margin-top: 100px;
+        background-color: #121212;
+    }
+
+    .about {
+        display: block;
+        margin: auto auto;
+    }
+
+    @-webkit-keyframes hue {
+        0% {
+            -webkit-filter: hue-rotate(0deg);
+        }
+
+        to {
+            -webkit-filter: hue-rotate(-1turn);
+        }
+    }
+
+    @-webkit-keyframes profilepicture {
+        0% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        25% {
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+        }
+
+        50% {
+            -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+        }
+
+        100% {
+            -webkit-transform: translateY(-35px) rotate(360deg);
+            transform: translateY(-35px) rotate(360deg);
+        }
+    }
+
+    @keyframes profilepicture {
+        0% {
+            -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        25% {
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+        }
+
+        50% {
+            -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+        }
+
+        100% {
+            -webkit-transform: translateY(-35px) rotate(360deg);
+            transform: translateY(-35px) rotate(360deg);
+        }
+    }
+
+    .ProfileIMG {
+        -webkit-animation: profilepicture 1.5s alternate infinite;
+        animation: profilepicture 1.5s alternate infinite;
+    }
+
+    .text-gradient-animate {
+        background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+        -webkit-animation: hue 6s linear infinite;
+    }
+
+    .text-gradient-animate {
+        color: var(--theme-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .font {
+        font-family: 'Changa', sans-serif;
+    }
+
+    .lights-btn {
+        border-radius: 25%;
+    }
+
+    .selects {
+        font-size: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 500px;
+    }
+
+    .selects>a {
+        color: white;
+        font-weight: bold;
+    }
+
+    .title {
+        font-weight: 700 !important;
+        font-size: 40px;
+    }
+
+    .card {
+        background-color: #1e1e1e;
+        color: #f8f8f8;
+        border-radius: 15px;
+        border: none;
+        background-color: #1e1e1e;
+    }
+
+    footer {
+        background-color: #272727;
+    }
+
+    .project-icon {
+        position: absolute;
+        bottom: 100%;
+        left: -100%;
+        border-radius: 50%;
+        width: 80px;
+    }
+
+    .hr_title {
+        width: 161px;
+        background-color: #FFC107;
+        font-weight: bold;
+    }
+
+    .is-warning {
+        color: white !important;
+    }
+
+    .is-warning:hover {
+        color: #121212 !important;
+    }
+
+    .color-1 {
+        -webkit-filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1);
+    }
+
+    .color-1:hover {
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    #twitter:hover {
+        color: none !important;
+        text-decoration: none;
+    }
+
+    #twitter {
+        color: #3273dc !important;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        .selects {
+            display: inline;
+            text-align: center;
+        }
+
+        .selects>a {
+            margin: 10px 20px;
+        }
+
+        .socials {
+            display: inline;
+        }
+
+        .color-1 {
+            display: none;
+        }
+
+        .selects>hr {
+            margin: auto auto;
+        }
+
+        .navbar {
+            display: block;
+        }
+    }
+
+    @media only screen and (min-width: 1023px) {
+        .hide-desktop {
+            display: none;
+        }
+    }
+
+    .done {
+        color: #00ff4c;
+    }
+
+    .undone {
+        color: #2e2e2e;
+    }
 </style>
 
 <body>
@@ -260,7 +560,65 @@
         </h1>
     </footer>
     </div>
-    <script src="./index.js"></script>
+    <script>
+                                                 const home_btn = document.getElementById("Home_btn");
+const Skills_btn = document.getElementById("Skills_btn");
+const Projects_btn = document.getElementById("Projects_btn");
+
+const home = document.getElementById("Home");
+const skills = document.getElementById("Skills");
+const projects = document.getElementById("Projects");
+
+home_btn.addEventListener("click", () => {
+    home.scrollIntoView(true);
+    // now account for fixed header
+    const scrolledY = window.scrollY;
+
+    if (scrolledY) {
+        window.scroll(0, scrolledY - 140);
+    }
+    menu.classList.remove("is-active");
+    navbarbutton.classList.remove("is-active");
+});
+
+Skills_btn.addEventListener("click", () => {
+    skills.scrollIntoView(true, { "behavior": "smooth" });
+    menu.classList.remove("is-active");
+    navbarbutton.classList.remove("is-active");
+});
+Projects_btn.addEventListener("click", () => {
+    Projects.scrollIntoView(true, { "behavior": "smooth" });
+    menu.classList.remove("is-active");
+    navbarbutton.classList.remove("is-active");
+});
+
+
+//
+const githubButton = document.getElementById("temtemcountergithub");
+const githubimg = document.getElementById("githubimg");
+
+
+
+githubButton.addEventListener("mouseleave", (event) => {
+    githubimg.style.filter = "none";
+});
+
+
+githubButton.addEventListener("mouseover", (event) => {
+    setTimeout(() => {
+        githubimg.style.filter = "brightness(100) invert(1)";
+    }, 0)
+});
+
+
+
+const navbarbutton = document.getElementById("burger");
+const menu = document.getElementById("menubar");
+
+navbarbutton.addEventListener("click", () => {
+    menu.classList.toggle("is-active");
+    navbarbutton.classList.toggle("is-active");
+});</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
